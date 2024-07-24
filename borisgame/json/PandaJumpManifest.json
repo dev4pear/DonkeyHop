@@ -11,14 +11,7 @@
     {
       "path": "spines",
       "type": "spine",
-      "files": [
-        "HTP_MinimalHand",
-        "Dust",
-        "Panda",
-        "Panda_Mesh",
-        "Spring",
-        "Wiatraczek"
-      ]
+      "files": ["HTP_MinimalHand", "Dust", "Panda_Mesh", "Spring", "Wiatraczek"]
     },
     {
       "path": "textures",

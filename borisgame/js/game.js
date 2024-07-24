@@ -99809,7 +99809,6 @@ function LevelStartGeneration() {
     const t = _SpawnPlatform(w[h].x, w[h].y);
     0 == h && (DataComponent.At(t).isFirst = !0);
   }
-  w = "Panda";
   0 == BMEngine.IsCanvas() && (w = "Panda_Mesh");
   l = PandaJumpPrefabsInstance.GameplaySpineObject(l, w, "down", 0, 850, {
     layerDepth: 20,
