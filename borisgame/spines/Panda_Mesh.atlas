@@ -15,7 +15,7 @@ LeftHand
   rotate: false
   xy: 74, 47
   size: 50, 29
-  orig: 40, 29
+  orig: 50, 29
   offset: 0, 0
   index: -1
 RightHand
