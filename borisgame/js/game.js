@@ -351,7 +351,7 @@ class BrandingInlogic extends GameBranding {
       const chatId = urlParams.get("chatId");
       var jumping_score = PandaJumpGlobalsInstance.subsession.score;
 
-      var telegramBotToken = "7428942640:AAGqf0-UFyWJevekFlWL7a5stHKdJQT3Ab4";
+      var telegramBotToken = "7280095625:AAFWYp43Y7T7p6V-e_bVWWtCkKEek-XOiSU";
       const requestBody = JSON.stringify({
         chat_id: chatId,
         text: `Your score is ${jumping_score}`,
