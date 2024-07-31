@@ -345,13 +345,11 @@ class BrandingInlogic extends GameBranding {
     if ("GameOver" == w.stateName && "enter" == w.stateChangeType) {
       if (1 == inlogicData.hasLost) return;
       onGameOver();
-      /////////////
-
       const urlParams = new URLSearchParams(window.location.search);
       const chatId = urlParams.get("chatId");
       var jumping_score = PandaJumpGlobalsInstance.subsession.score;
 
-      var telegramBotToken = "7280095625:AAFWYp43Y7T7p6V-e_bVWWtCkKEek-XOiSU";
+      var telegramBotToken = "7428942640:AAGqf0-UFyWJevekFlWL7a5stHKdJQT3Ab4";
       const requestBody = JSON.stringify({
         chat_id: chatId,
         text: `Your score is ${jumping_score}`,
@@ -363,8 +361,6 @@ class BrandingInlogic extends GameBranding {
         },
         body: requestBody,
       });
-      /////////////
-      //alert(PandaJumpGlobalsInstance.subsession.score);
       inlogicData.hasLost = 1;
     }
     "GameplayLevel" == w.stateName &&
@@ -99520,7 +99516,9 @@ class GameSpecificPremades extends CasualGamePremades {
   }
   Always(l, w) {
     l = l.Background(w);
-    VisualComponent.At(l).getDisplayedAsImage().setScale(8, 8);
+    VisualComponent.At(l)
+      .getDisplayedAsImage()
+      .setScale(window.screen.width / 435, window.screen.width / 435);
   }
   GameplayLoop(l, w) {
     super.GameplayLoop(l, w);
@@ -99813,7 +99811,7 @@ function LevelStartGeneration() {
   }
   w = "Panda";
   0 == BMEngine.IsCanvas() && (w = "Panda_Mesh");
-  l = PandaJumpPrefabsInstance.GameplaySpineObject(l, w, "down", 0, 900, {
+  l = PandaJumpPrefabsInstance.GameplaySpineObject(l, w, "down", 0, 850, {
     layerDepth: 20,
     loop: !0,
   });
@@ -99828,7 +99826,7 @@ function LevelStartGeneration() {
   PhysicsComponent.AddToEntity(l, {
     groupsList: ["PLAYER"],
   });
-  PhysicsComponent.At(l).resizeDeltaOwnSize(-70, -85, 40, 40);
+  PhysicsComponent.At(l).resizeDeltaOwnSize(-70, -45, 40, 40);
   FollowPointerMovementComponent.AddToEntity(l, {
     enabled: !1,
     processAxisY: !1,
